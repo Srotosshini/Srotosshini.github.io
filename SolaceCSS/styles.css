@@ -1,0 +1,353 @@
+/* General styling for the entire body */
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif; /* Applying Google Fonts */
+    background-color: #fff; /* White background for a clean and polished look */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Styling for header and footer sections */
+header, footer {
+    background: linear-gradient(135deg, #c1e3ff, #a0cbee); /* Subdued sky blue gradient */
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Header container for layout */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Center container */
+    margin: 0 auto; /* Center alignment */
+    padding: 0 20px; /* Padding for better spacing */
+}
+
+/* Logo styling */
+.logo {
+    height: 80px; /* Adjusted size */
+    width: auto;
+}
+
+/* Styling for navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Space between nav links */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #003870; /* Navy Blue */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: white; /* White color on hover */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+/* Styling for search bar */
+.search-container {
+    display: flex; /* Flexbox for the search input and button */
+    justify-content: space-between;
+    width: 300px; /* Increase width to make it longer */
+}
+
+.search-container input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #003870;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-container input:focus {
+    border-color: #a9e2ff; /* Sky Blue */
+}
+
+/* Position the search button adjacent to the input field */
+#search-button {
+    background: #003870;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: 8px 15px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-button i {
+    font-size: 1em;
+}
+
+/* Floating social media buttons on the left */
+.floating-social-media {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.floating-social-media a {
+    font-size: 20px;
+    color: #003870;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.floating-social-media a:hover {
+    color: #a9e2ff; /* Sky Blue */
+}
+
+/* Floating chat bot button at the bottom-right */
+.floating-chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #003870;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.floating-chatbot:hover {
+    background-color: #a9e2ff;
+    color: #003870;
+}
+
+/* Main video container */
+.video-container {
+    display: flex;
+    justify-content: center; /* Centers the video horizontally */
+    align-items: center;     /* Centers the video vertically */
+    height: 100vh;            /* Fixed height for the video section */
+    margin-top: 5px;        
+}
+
+.video-container iframe {
+    max-width: 100%;         /* Makes the video responsive */
+    width: 1000px;            /* Set fixed width */
+    height: 515px;           /* Set fixed height */
+}
+
+
+.cta-button {
+    background-color: white;
+    color: #003870;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 25px; /* Rounded button */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    z-index: 2; /* Ensure this button is above everything */
+}
+
+.cta-button:hover {
+    background-color: #003870;
+    color: white;
+}
+
+/* Styling for the features section */
+.features-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #ffffff, #e3f2fd); /* White to light sky blue gradient */
+}
+
+.features-section h2 {
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #003870; /* Navy Blue */
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto; /* Center alignment */
+}
+
+.feature-button {
+    background-color: #003870; /* Navy Blue */
+    color: white;
+    padding: 30px 45px;  /* Increased padding */
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 25px;   /*Rounded rectangle shape*/ 
+    text-align: center;
+    font-size: 1.4em; /* Increased font size */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.feature-button:hover {
+    background-color: #a9e2ff; /* Sky Blue */
+    color: #003870;
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Styling for the information section */
+.information-section {
+    text-align: left;
+    padding: 50px 20px;
+    background: #fff; /* White background */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%; /* Full width */
+    z-index: 1;
+}
+
+.information-content {
+    max-width: 1200px;
+    margin: 0 auto; /* Center alignment */
+}
+
+.information-section .lowkey-text {
+    font-size: 0.9em; /* Smaller font size */
+    color: #555; /* Soft grey color */
+    overflow: hidden; /* Ensure hidden content doesn't take up space */
+    white-space: nowrap; /* Text in one line */
+    text-overflow: ellipsis; /* Ellipsis for hidden text */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Show only 2 lines */
+    -webkit-box-orient: vertical;
+}
+
+.lowkey-text .extra-content {
+    display: none;
+    white-space: normal; /* Reset to normal when expanded */
+}
+
+.lowkey-text.expanded {
+    white-space: normal; /* When expanded, show text normally */
+    -webkit-line-clamp: none; /* Remove line clamp */
+}
+
+.expand-button {
+    background-color: #003870;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.expand-button:hover {
+    background-color: #a9e2ff;
+}
+
+/* Footer section */
+footer {
+    padding: 20px;
+    background-color: #003870;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+.chat-button-container {
+    position: fixed; /* Keeps the button fixed in one position */
+    bottom: 20px;    /* Distance from the bottom of the screen */
+    right: 40px;     /* Distance from the right side of the screen */
+    z-index: 1000;   /* Ensures the button stays on top of other elements */
+}
+
+.chat-button {
+    width: 60px;   /* Set the size of the button */
+    height: 60px;
+    cursor: pointer;  /* Changes the cursor to pointer when hovering */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.chat-button:hover {
+    transform: scale(1.1); /* Slightly enlarges the button when hovered */
+}
+
+
+/* Chatbox container */
+.chatbox {
+    position: fixed;
+    bottom: 90px; /* Adjust to be above the chat button */
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1001;
+    display: block; /* Initially visible */
+}
+
+/* Chat header */
+.chat-header {
+    background-color: #2B4C29; /* Header background color */
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Chat body */
+.chat-body {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Chat message */
+.chat-message {
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Chat input */
+.chat-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+}
+
+.close-chat {
+    color: white;
+    cursor: pointer;
+}
